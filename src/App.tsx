@@ -5,7 +5,7 @@ const mockTodos = [
   {
     id: '1',
     title: 'todo 1',
-    completed: false
+    completed: true
   },
   {
     id: '2',
@@ -20,12 +20,20 @@ const mockTodos = [
 ]
 
 const App = (): JSX.Element => {
-  const [todos] = useState(mockTodos)
+  const [todos, setTodos] = useState(mockTodos)
+
+  const handleRemove = (id: string): void => {
+    const newTodos = todos.filter(todo => todo.id !== id)
+    setTodos(newTodos)
+  }
 
   return (
-    <>
-      <Todos todos={todos}/>
-    </>
+    <div className='bg-slate-900  h-screen w-full'>
+      <h1 className='text-center text-3xl text-white'>TODO App with React and TypeScript</h1>
+      <Todos
+        onRemoveTodo={handleRemove}
+        todos={todos} />
+    </div>
   )
 }
 
