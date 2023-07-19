@@ -6,10 +6,10 @@ interface Props {
 }
 export const Header: React.FC<Props> = ({ onAddTodo }) => {
   return (
-    <header>
-      <h1>Todo
-       {/*  <img src="https://logospng.org/wp-content/uploads/typescript.png" alt="ts logo" /> */}
-      </h1>
+    <header className='container mt-10 mx-auto'>
+      <div className='w-full flex justify-center items-center gap-5'>
+        <img className='w-44' src="https://cdn.thenewstack.io/media/2022/01/10b88c68-typescript-logo.png" alt="ts logo" />
+      </div>
 
       <CreateTodo saveTodo={onAddTodo} />
     </header>

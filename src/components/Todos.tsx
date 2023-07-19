@@ -13,7 +13,7 @@ export const Todos: React.FC<Props> = (
   { todos, onRemoveTodo, onToggleCompleteTodo }
 ) => {
   return (
-    <div className='container mx-auto my-52 bg-white'>
+    <div className='container mx-auto w-1/2 mt-10 mb-10 bg-white'>
       <ul>
         {todos.map(todo => (
           <li

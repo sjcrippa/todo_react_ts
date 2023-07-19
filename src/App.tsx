@@ -78,8 +78,8 @@ const App = (): JSX.Element => {
   }
 
   return (
-    <div className='bg-slate-900  h-screen w-full'>
-      <h1 className='text-center text-3xl text-white'>TODO App with React and TypeScript</h1>
+    <div className='w-full'>
+      <h1 className='text-center text-3xl text-white'>TODO App</h1>
       <Header onAddTodo={handleAddToDo} />
       <Todos
         onToggleCompleteTodo={handleCompleted}

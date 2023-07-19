@@ -18,9 +18,11 @@ export const CreateTodo: React.FC<Props> = ({ saveTodo }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form
+        className='flex justify-center mt-5'
+        onSubmit={handleSubmit}>
         <input
-          className='new-todo'
+          className='new-todo px-10 p-2'
           value={inputValue}
           onChange={(e) => { setInputValue(e.target.value) }}
           placeholder='¿Que quieres hacer?'
