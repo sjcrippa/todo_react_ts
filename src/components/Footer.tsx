@@ -17,7 +17,7 @@ export const Footer: React.FC<Props> = ({
   onClearCompleted
 }) => {
   return (
-    <div>
+    <div className='text-white flex gap-10 items-center justify-center'>
       <footer>
         <span>
           <p>{activeCount} tareas pendientes</p>
@@ -26,8 +26,19 @@ export const Footer: React.FC<Props> = ({
 
       <Filters
         filterSelected={filterSelected}
-        onFilterChange={() => { }}
+        onFilterChange={handleFilterChange}
       />
+
+      {
+        completedCount > 0 && (
+          <button
+            className='completed text-white'
+            onClick={onClearCompleted}
+          >
+            Borrar completadas
+          </button>
+        )
+      }
     </div>
   )
 }

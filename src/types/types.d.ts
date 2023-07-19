@@ -3,7 +3,7 @@
 import type { TODO_FILTERS } from '../consts'
 
 export interface Todo {
-  id: number
+  id: string
   title: string
   completed: boolean
 }
