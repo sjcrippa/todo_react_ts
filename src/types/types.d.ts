@@ -1,5 +1,7 @@
 // el .d dentro de la ruta del archivo quiere decir que dentro de este codigo, solo habra DECLARACIONES, es decir, no va a haber codigo, solo declaraciones.
 
+import type { TODO_FILTERS } from '../consts'
+
 export interface Todo {
   id: number
   title: string
@@ -11,3 +13,5 @@ export type TodoTitle = Pick<Todo, 'title'>
 export type TodoCompleted = Pick<Todo, 'completed'>
 
 export type ListOfTodos = Todo[]
+
+export type FilterValue = typeof TODO_FILTERS[keyof typeof TODO_FILTERS]
